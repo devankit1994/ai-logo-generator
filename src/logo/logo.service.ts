@@ -5,11 +5,15 @@ import { generateLogoPrompt } from './prompts/logo';
 
 @Injectable()
 export class LogoService {
-  async generate(): Promise<string> {
+  async generate(
+    brandName: string,
+    industry: string,
+    theme: string,
+  ): Promise<string> {
     const LOGO_GENERATION_PROMPT = generateLogoPrompt(
-      'Pure',
-      'drinking water bottle manufacturing',
-      'purity, hydration, and cleanliness',
+      brandName,
+      industry,
+      theme,
     );
 
     const together = new Together({ apiKey: process.env.TOGETHER_API_KEY });
