@@ -16,8 +16,8 @@ export class LogoService {
     const response = await together.images.create({
       model: Models.BLACK_FOREST_LABS_FLUX_1_SCHNELL_FREE,
       prompt: LOGO_GENERATION_PROMPT,
-      width: 512,
-      height: 512,
+      width: 1024,
+      height: 1024,
       steps: 1,
       n: 1,
       response_format: 'url',
